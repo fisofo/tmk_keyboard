@@ -39,6 +39,12 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+/* define tapping settigs */
+/* period of tapping(ms) */
+// #define TAPPING_TERM    300
+/* tap count needed for toggling a feature */
+//~ #define TAPPING_TOGGLE  3
+
 /* Set 0 if debouncing isn't needed */
 /*
  * This constant define not debouncing time in msecs, but amount of matrix
