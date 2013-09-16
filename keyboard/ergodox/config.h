@@ -41,7 +41,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 
 /* define tapping settigs */
 /* period of tapping(ms) */
-// #define TAPPING_TERM    300
+// #define TAPPING_TERM    200
 /* tap count needed for toggling a feature */
 //~ #define TAPPING_TOGGLE  3
 

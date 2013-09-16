@@ -102,42 +102,13 @@ uint8_t matrix_scan(void)
     }
 #endif
 
-#ifdef KEYMAP_CUB
+#ifdef KEYMAP_FISOFO
     uint8_t layer = biton32(layer_state);
 
-    if (layer == 1) {
-		ergodox_board_led_on();
-        ergodox_left_led_1_on();
-        ergodox_left_led_2_off();
-        ergodox_left_led_3_off();
-    } else if (layer == 2) {
-        ergodox_left_led_1_off();
-        ergodox_left_led_2_on();
-        ergodox_left_led_3_off();
-    } else if (layer == 3) {
-        ergodox_left_led_1_off();
-        ergodox_left_led_2_off();
-        ergodox_left_led_3_on();
-    } else if (layer == 4) {
-        ergodox_left_led_1_on();
-        ergodox_left_led_2_off();
-        ergodox_left_led_3_on();
-    } else if (layer == 5) {
-        ergodox_left_led_1_on();
-        ergodox_left_led_2_on();
-        ergodox_left_led_3_off();
-    } else if (layer == 6) {
-        ergodox_left_led_1_off();
-        ergodox_left_led_2_on();
-        ergodox_left_led_3_on();
-    } else if (layer == 7) {
-        ergodox_left_led_1_on();
-        ergodox_left_led_2_on();
-        ergodox_left_led_3_on();
+    if (layer == 0) {
+		ergodox_board_led_off();
     } else {
-        ergodox_left_led_1_off();
-        ergodox_left_led_2_off();
-        ergodox_left_led_3_off();
+        ergodox_board_led_on();
     }
 
     // not actually needed because we already calling init_mcp23018() in next line

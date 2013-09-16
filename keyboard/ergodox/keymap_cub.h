@@ -66,7 +66,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layout: layer 2: mouse + numpad
         // left hand
         TRNS,NO,  NO,  NO,  NO,  PAUS,PSCR,
-        TRNS,WH_L,WH_U,WH_D,WH_R,BTN2,TRNS,
+        TRNS,WH_L,WH_U,WH_D,WH_R,BTN2,FN5,
         TRNS,MS_L,MS_U,MS_D,MS_R,BTN1,
         TRNS,NO,  NO,  NO,  NO,  BTN3,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
@@ -86,9 +86,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer 3: F-keys only
         // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,  
+        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
         TRNS,F13, F14, F15, F16, NO,  TRNS,
-        TRNS,F17, F18, F19, F20, NO,  
+        TRNS,F17, F18, F19, F20, NO,
         TRNS,F21, F22, F23, F24, NO,  TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -152,9 +152,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // layout: layer N: transparent on edges, all others are empty
         // left hand
-        TRNS,NO,  NO,  NO,  NO,  NO,  NO,  
+        TRNS,NO,  NO,  NO,  NO,  NO,  NO,
         TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
-        TRNS,NO,  NO,  NO,  NO,  NO,  
+        TRNS,NO,  NO,  NO,  NO,  NO,
         TRNS,NO,  NO,  NO,  NO,  NO,  TRNS,
         TRNS,TRNS,TRNS,LALT,LGUI,
                                       TRNS,TRNS,
