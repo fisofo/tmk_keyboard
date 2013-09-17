@@ -41,7 +41,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 
 /* define tapping settigs */
 /* period of tapping(ms) */
-// #define TAPPING_TERM    200
+#define TAPPING_TERM    180
 /* tap count needed for toggling a feature */
 //~ #define TAPPING_TOGGLE  3
 
@@ -64,10 +64,10 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 #define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
-)
-
+/* #define IS_COMMAND() ( \
+ *   keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
+ *)
+ */
 
 
 /*

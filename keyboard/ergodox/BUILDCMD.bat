@@ -1,1 +1,0 @@
-make -B -f Makefile.pjrc fisofo

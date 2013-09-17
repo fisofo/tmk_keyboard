@@ -111,14 +111,11 @@ uint8_t matrix_scan(void)
         ergodox_board_led_on();
     }
 
-    // not actually needed because we already calling init_mcp23018() in next line
     mcp23018_status = ergodox_left_leds_update();
-
 #endif
 
     for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
         select_row(i);
-        _delay_us(30);  // without this wait read unstable value.
         matrix_row_t cols = read_cols(i);
         if (matrix_debouncing[i] != cols) {
             matrix_debouncing[i] = cols;
@@ -184,11 +181,11 @@ uint8_t matrix_key_count(void)
  *
  * Teensy
  * col: 0   1   2   3   4   5
- * pin: F0  F1  F4  F5  F6  F7
+ * pin: F0  F1  F4  F5  F6  F7 
  *
  * MCP23018
  * col: 0   1   2   3   4   5
- * pin: B5  B4  B3  B2  B1  B0
+ * pin: B5  B4  B3  B2  B1  B0 
  */
 static void  init_cols(void)
 {
@@ -218,6 +215,7 @@ static matrix_row_t read_cols(uint8_t row)
             return data;
         }
     } else {
+        _delay_us(30);  // without this wait read unstable value.
         // read from teensy
         return
             (PINF&(1<<0) ? 0 : (1<<0)) |
@@ -276,7 +274,7 @@ static void select_row(uint8_t row)
             // set other rows hi-Z : 1
             mcp23018_status = i2c_start(I2C_ADDR_WRITE);        if (mcp23018_status) goto out;
             mcp23018_status = i2c_write(GPIOA);                 if (mcp23018_status) goto out;
-            mcp23018_status = i2c_write( 0xFF & ~(1<<row)
+            mcp23018_status = i2c_write( 0xFF & ~(1<<row) 
                                   & ~(ergodox_left_led_3<<LEFT_LED_3_SHIFT)
                               );                                if (mcp23018_status) goto out;
         out:
