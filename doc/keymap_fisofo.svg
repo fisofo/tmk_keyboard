@@ -28,8 +28,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="514.39134"
-     inkscape:cy="381.2759"
+     inkscape:cx="549.74668"
+     inkscape:cy="439.25866"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1690,17 +1690,16 @@
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="186.12061"
-       y="73.019287"
+       x="605.74078"
+       y="492.51221"
        id="txt00L1-1-88"
        sodipodi:linespacing="125%"
-       transform="translate(419.62019,417.49293)"
        inkscape:label="#text3785-8"><tspan
          sodipodi:role="line"
          id="tspan3787-1-8-3"
-         x="186.12061"
-         y="73.019287"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New" /></text>
+         x="605.74078"
+         y="492.51221"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New" /></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1816,7 +1815,7 @@
          id="tspan3787-5-7-60-4"
          x="186.12061"
          y="73.019287"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New">Shift</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New">Shift/tap</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -2154,7 +2153,7 @@
          x="303.54413"
          y="845.58759"
          style="font-size:11px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#0000ff;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New"
-         id="tspan3719"></tspan><tspan
+         id="tspan3719" /><tspan
          sodipodi:role="line"
          x="303.54413"
          y="859.33759"
@@ -2480,21 +2479,21 @@
          x="186.12061"
          y="73.019287"
          style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New"
-         id="tspan3718"> Ins</tspan></text>
+         id="tspan3737"> Ins</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="186.12061"
-       y="73.019287"
+       x="216.81659"
+       y="889.53796"
        id="txt00L1-1-1-4-8-6"
        sodipodi:linespacing="125%"
-       transform="matrix(0.9152611,-0.40286117,0.40286117,0.9152611,353.03852,734.96157)"
+       transform="matrix(0.9152611,-0.40286117,0.40286117,0.9152611,0,0)"
        inkscape:label="#text3785-8"><tspan
          sodipodi:role="line"
          id="tspan3787-1-8-8-1-0-0"
-         x="186.12061"
-         y="73.019287"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New" /></text>
+         x="216.81659"
+         y="889.53796"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New">Ctrl</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -4285,7 +4284,7 @@
          id="tspan3787-5-7-60-4-5"
          x="186.12061"
          y="73.019287"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New">Shift</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New">Shift/tap</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -4414,10 +4413,10 @@
        transform="translate(-148.11769,407.51523)"
        inkscape:label="#text3785"><tspan
          sodipodi:role="line"
-         id="tspan3787-5-7-60-4-6-0"
          x="186.12061"
          y="73.019287"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New">Tab</tspan></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Courier New;-inkscape-font-specification:Courier New"
+         id="tspan3733">Tab</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -4431,7 +4430,7 @@
          id="tspan3787-1-8-8-5-2-3-6"
          x="186.12061"
          y="73.019287"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New" /></text>
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff0000;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New">Alt+F4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"

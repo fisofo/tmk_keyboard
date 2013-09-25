@@ -8,7 +8,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ESC,    1,   2,   3,   4,   5,   GRV,
         TAB,    Q,   W,   E,   R,   T,   FN1,
         LGUI,   A,   S,   D,   F,   G,
-        LSFT,   Z,   X,   C,   V,   B,   F15,
+        FN18,   Z,   X,   C,   V,   B,   F15,
         LCTL,LALT,CAPS,LALT,LCTL,
 								     VOLD,VOLU,
 										  PSCR,
@@ -17,11 +17,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              EQL, 6,   7,   8,   9,   0,   MINS,
 			 FN2, Y,   U,   I,   O,   P,   BSLS,
                   H,   J,   K,   L,   SCLN,QUOT,
-			 F16, N,   M,   COMM,DOT, SLSH,RSFT,
+			 F16, N,   M,   COMM,DOT, SLSH,FN19,
                        SPC, FN3,  APP,FN9,FN10,
         FN11,FN12,
         FN13,
-         INS, FN4,FN8
+		FN17, FN4,FN8
     ),
 
 
@@ -91,7 +91,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // RED layout: layer 4: F-keys instead of numbers
         // left hand
         F14,  F1,  F2,  F3,  F4,  F5, F12,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        FN16,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
@@ -185,6 +185,12 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LGUI, KC_UP),				// FN13 - Win+Up
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_DEL),	// FN14 - Ctrl+Alt+Del
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_END),	// FN15 - Ctrl+Alt+End
+	ACTION_MODS_KEY(MOD_LALT, KC_F4),				// FN16 - Alt+F4
+
+	ACTION_MODS_TAP_KEY(MOD_RCTL, KC_INS),         	// FN17 - Tap = Ins / Hold = RCtrl
+
+	ACTION_MODS_ONESHOT(MOD_LSFT),         			// FN18 - Tap = Next key modified / Hold = Shift
+	ACTION_MODS_ONESHOT(MOD_RSFT),         			// FN19 - Tap = Next key modified / Hold = Shift
 
 };
 

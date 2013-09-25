@@ -39,12 +39,6 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
-/* define tapping settigs */
-/* period of tapping(ms) */
-#define TAPPING_TERM    180
-/* tap count needed for toggling a feature */
-//~ #define TAPPING_TOGGLE  3
-
 /* Set 0 if debouncing isn't needed */
 /*
  * This constant define not debouncing time in msecs, but amount of matrix
@@ -56,7 +50,8 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
  *
  * And so, there is no sense to have DEBOUNCE higher than 2.
  */
-#define DEBOUNCE    2
+#define DEBOUNCE        2
+#define TAPPING_TERM    180
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -64,10 +59,10 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 #define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
-/* #define IS_COMMAND() ( \
- *   keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
- *)
- */
+#define IS_COMMAND() ( \
+    keyboard_report->mods == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
+)
+
 
 
 /*
