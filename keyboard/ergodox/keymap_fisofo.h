@@ -20,7 +20,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			 F16, N,   M,   COMM,DOT, SLSH,FN19,
                        SPC, FN3,  APP,FN9,FN10,
         FN11,FN12,
-        FN13,
+        BSPC,
 		FN17, FN4,FN8
     ),
 
@@ -182,7 +182,7 @@ static const uint16_t PROGMEM fn_actions[] = {
 
     ACTION_MODS_KEY(MOD_LGUI, KC_LEFT),				// FN11 - Win+Left
 	ACTION_MODS_KEY(MOD_LGUI, KC_RGHT),				// FN12 - Win+Right
-    ACTION_MODS_KEY(MOD_LGUI, KC_UP),				// FN13 - Win+Up
+    ACTION_MODS_KEY(MOD_LGUI, KC_UP),				// UNUSED: FN13 - Win+Up
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_DEL),	// FN14 - Ctrl+Alt+Del
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_END),	// FN15 - Ctrl+Alt+End
 	ACTION_MODS_KEY(MOD_LALT, KC_F4),				// FN16 - Alt+F4
