@@ -3,33 +3,33 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		See SVG file, doc/keymap_fisofo.svg
      */
 
-    KEYMAP(  // BLACK layout: layer 0: qwerty
+    KEYMAP(  // BLACK layout: layer 0: colemak
         // left hand
         ESC,    1,   2,   3,   4,   5,   GRV,
-        TAB,    Q,   W,   E,   R,   T,   FN1,
-        LGUI,   A,   S,   D,   F,   G,
+        TAB,    Q,   W,   F,   P,   G,   F16,
+        LGUI,   A,   R,   S,   T,   D,
         FN18,   Z,   X,   C,   V,   B,   F15,
         LCTL,LALT,CAPS,LALT,LCTL,
 								     VOLD,VOLU,
 										  PSCR,
-								BSPC, FN4, INS,
+								BSPC, FN8,FN17,
         // right hand
              EQL, 6,   7,   8,   9,   0,   MINS,
-			 FN2, Y,   U,   I,   O,   P,   BSLS,
-                  H,   J,   K,   L,   SCLN,QUOT,
-			 F16, N,   M,   COMM,DOT, SLSH,FN19,
-                       SPC, FN3,  APP,FN9,FN10,
+			 FN1, J,   L,   U,   Y,SCLN,   BSLS,
+                  H,   N,   E,   I,   O,   QUOT,
+			BSPC, K,   M,   COMM,DOT, SLSH,FN19,
+                       SPC, FN3,  APP, FN9,FN10,
         FN11,FN12,
-        BSPC,
-		FN17, FN4,FN8
+        FN13,
+		FN17, FN4,ENT
     ),
 
 
-	KEYMAP(  // layout: layer 1: colemak
+	KEYMAP(  // layout: layer 1: qwerty
         // left hand
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,   Q,   W,   F,   P,   G, FN5,
-        TRNS,   A,   R,   S,   T,   D,
+        TRNS,   Q,   W,   E,   R,   T,TRNS,
+        TRNS,   A,   S,   D,   F,   G,
         TRNS,   Z,   X,   C,   V,   B,TRNS,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
@@ -37,9 +37,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  TRNS,TRNS,TRNS,
         // right hand
              TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-             TRNS,   J,   L,   U,   Y,SCLN,TRNS,
-			         H,   N,   E,   I,   O,TRNS,
-             TRNS,   K,   M,TRNS,TRNS,TRNS,TRNS,
+              FN5,   Y,   U,   I,   O,   P,TRNS,
+			         H,   J,   K,   L,SCLN,TRNS,
+             TRNS,   N,   M,TRNS,TRNS,TRNS,TRNS,
                        TRNS,TRNS,TRNS,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
@@ -78,11 +78,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            TRNS,
                                  TRNS,TRNS,TRNS,
         // right hand
-             TRNS,  NO,NLCK,PSLS,PAST,PMNS,TRNS,
-             TRNS, ESC,  P7,  P8,  P9,PPLS,TRNS,
+             TRNS,  NO,NLCK,PSLS,PAST,PMNS,PMNS,
+             TRNS, ESC,  P7,  P8,  P9,FN21,TRNS,
                   CALC,  P4,  P5,  P6,PPLS,TRNS,
-             TRNS,  NO,  P1,  P2,  P3,PENT,TRNS,
-                         P0, FN7,PDOT,PENT,TRNS,
+             TRNS,  NO,  P1,  P2,  P3, EQL,TRNS,
+                         P0, FN7,PDOT,TRNS,TRNS,
         TRNS,TRNS,
         TRNS,
         TRNS,TRNS,TRNS
@@ -90,23 +90,23 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KEYMAP(  // RED layout: layer 4: F-keys instead of numbers
         // left hand
-        F14,  F1,  F2,  F3,  F4,  F5, F12,
-        FN16,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,  F1,  F2,  F3,  F4,  F5, F12,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,FN16,
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, F14,
         TRNS,TRNS,TRNS,TRNS,TRNS,
                                       TRNS,TRNS,
                                            TRNS,
 								 TRNS,TRNS,TRNS,
         // right hand
-		   TRNS,  F6,  F7,  F8,  F9, F10, F11,
-             NO,  NO,HOME,  UP, END,  NO,TRNS,
-                  NO,LEFT,DOWN,RGHT,  NO,TRNS,
-           TRNS,  NO,PGUP,  NO,PGDN,  NO,TRNS,
+		   FN20,  F6,  F7,  F8,  F9, F10, F11,
+			FN2,  NO,HOME,  UP, END,FN22,TRNS,
+                  NO,LEFT,DOWN,RGHT,FN23,TRNS,
+           TRNS,  NO,PGUP,  NO,PGDN,FN24,TRNS,
                      TRNS,  NO,TRNS,TRNS,TRNS,
         FN14,FN15,
-        TRNS,
-        TRNS,TRNS,TRNS
+        RSFT,
+        RCTL,TRNS,TRNS
     ),
 
 /*
@@ -165,32 +165,39 @@ enum function_id {
  * Fn action definition
  */
 static const uint16_t PROGMEM fn_actions[] = {
-    ACTION_LAYER_SET(0, ON_BOTH),     		     	// UNUSED: FN0  - Set to  layer 0|Qwerty
-    ACTION_LAYER_ON(1, ON_PRESS),					// FN1  - turn on layer 1|Colemak
+    ACTION_LAYER_SET(0, ON_BOTH),     		     	// UNUSED: FN0  - Set to  layer 0|Colemak
+    ACTION_LAYER_ON(1, ON_PRESS),					// FN1  - turn on layer 1|Qwerty
     ACTION_LAYER_ON(2, ON_PRESS),	       			// FN2  - turn on Layer 2|Gaming
 	ACTION_LAYER_ON(3, ON_PRESS),   				// FN3  - turn on Layer 3|Numpad+Mouse
-	ACTION_LAYER_TAP_KEY(4, KC_DEL),				// FN4  - Tap = Delete / Hold = Layer 4|Navigation+F-key
+	ACTION_LAYER_TAP_KEY(4, KC_INS),				// FN4  - Tap = Insert / Hold = Layer 4|Navigation+F-key
 
-	ACTION_LAYER_OFF(1, ON_PRESS),					// FN5  - turn off layer 1|Colemak
+	ACTION_LAYER_OFF(1, ON_PRESS),					// FN5  - turn off layer 1|Qwerty
 	ACTION_LAYER_OFF(2, ON_PRESS),		       		// FN6  - turn off Layer 2|Gaming
 	ACTION_LAYER_OFF(3, ON_PRESS),      			// FN7  - turn off Layer 3|Numbpad+Mouse
 
-	ACTION_LAYER_TAP_KEY(3, KC_ENT),				// FN8  - Tap = Enter / Hold = Layer 3|Numbpad+Mouse
+	ACTION_LAYER_MOMENTARY(4),						// FN8  - Layer 3|Numbpad+Mouse
 
 	ACTION_MODS_TAP_KEY(MOD_RALT, KC_LBRC),         // FN9  - Tap = [ { / Hold = RAlt
 	ACTION_MODS_TAP_KEY(MOD_RCTL, KC_RBRC),         // FN10 - Tap = ] } / Hold = RCtrl
 
     ACTION_MODS_KEY(MOD_LGUI, KC_LEFT),				// FN11 - Win+Left
 	ACTION_MODS_KEY(MOD_LGUI, KC_RGHT),				// FN12 - Win+Right
-    ACTION_MODS_KEY(MOD_LGUI, KC_UP),				// UNUSED: FN13 - Win+Up
+    ACTION_MODS_KEY(MOD_LGUI, KC_UP),				// FN13 - Win+Up
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_DEL),	// FN14 - Ctrl+Alt+Del
     ACTION_MODS_KEY(MOD_LCTL | MOD_LALT, KC_END),	// FN15 - Ctrl+Alt+End
 	ACTION_MODS_KEY(MOD_LALT, KC_F4),				// FN16 - Alt+F4
 
-	ACTION_MODS_TAP_KEY(MOD_RCTL, KC_INS),         	// FN17 - Tap = Ins / Hold = RCtrl
+	ACTION_MODS_TAP_KEY(MOD_RCTL, KC_DEL),         	// FN17 - Tap = Ins / Hold = RCtrl
 
 	ACTION_MODS_ONESHOT(MOD_LSFT),         			// FN18 - Tap = Next key modified / Hold = Shift
 	ACTION_MODS_ONESHOT(MOD_RSFT),         			// FN19 - Tap = Next key modified / Hold = Shift
+
+	ACTION_FUNCTION(TEENSY_KEY),                    // FN20 - Teensy key
+
+	ACTION_MODS_KEY(MOD_LSFT, KC_1), 				// FN21 - !
+	ACTION_MODS_KEY(MOD_RCTL, KC_X), 				// FN22 - Ctrl+X
+	ACTION_MODS_KEY(MOD_RCTL, KC_C), 				// FN23 - Ctrl+C
+	ACTION_MODS_KEY(MOD_RCTL, KC_V), 				// FN24 - Ctrl+V
 
 };
 
