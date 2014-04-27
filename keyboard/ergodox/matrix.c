@@ -47,7 +47,7 @@ static void init_cols(void);
 static void unselect_rows();
 static void select_row(uint8_t row);
 
-static uint8_t mcp23018_status;
+static uint8_t mcp23018_reset_loop;
 
 #ifdef DEBUG_MATRIX_FREQ
 uint32_t matrix_timer;
@@ -71,6 +71,7 @@ void matrix_init(void)
     // initialize row and col
     init_ergodox();
     mcp23018_status = init_mcp23018();
+    ergodox_blink_all_leds();
     unselect_rows();
     init_cols();
 
@@ -88,6 +89,21 @@ void matrix_init(void)
 
 uint8_t matrix_scan(void)
 {
+    if (mcp23018_status) { // if there was an error
+        if (++mcp23018_reset_loop == 0) {
+            // since mcp23018_reset_loop is 8 bit - we'll try to reset once in 255 matrix scans
+            // this will be approx bit more frequent than once per second
+            print("trying to reset mcp23018\n");
+            mcp23018_status = init_mcp23018();
+            if (mcp23018_status) {
+                print("left side not responding\n");
+            } else {
+                print("left side attached\n");
+                ergodox_blink_all_leds();
+            }
+        }
+    }
+
 #ifdef DEBUG_MATRIX_FREQ
     matrix_scan_count++;
 
@@ -181,11 +197,11 @@ uint8_t matrix_key_count(void)
  *
  * Teensy
  * col: 0   1   2   3   4   5
- * pin: F0  F1  F4  F5  F6  F7
+ * pin: F0  F1  F4  F5  F6  F7 
  *
  * MCP23018
  * col: 0   1   2   3   4   5
- * pin: B5  B4  B3  B2  B1  B0
+ * pin: B5  B4  B3  B2  B1  B0 
  */
 static void  init_cols(void)
 {
@@ -274,7 +290,7 @@ static void select_row(uint8_t row)
             // set other rows hi-Z : 1
             mcp23018_status = i2c_start(I2C_ADDR_WRITE);        if (mcp23018_status) goto out;
             mcp23018_status = i2c_write(GPIOA);                 if (mcp23018_status) goto out;
-            mcp23018_status = i2c_write( 0xFF & ~(1<<row)
+            mcp23018_status = i2c_write( 0xFF & ~(1<<row) 
                                   & ~(ergodox_left_led_3<<LEFT_LED_3_SHIFT)
                               );                                if (mcp23018_status) goto out;
         out:
