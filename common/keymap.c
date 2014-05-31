@@ -136,7 +136,11 @@ static action_t keycode_to_action(uint8_t keycode)
             action.code = ACTION_USAGE_CONSUMER(KEYCODE2CONSUMER(keycode));
             break;
         case KC_MS_UP ... KC_MS_ACCEL2:
+#ifdef MOUSEKEY_ENABLE
             action.code = ACTION_MOUSEKEY(keycode);
+#else
+            action.code = ACTION_KEY(keycode);
+#endif
             break;
         case KC_TRNS:
             action.code = ACTION_TRANSPARENT;

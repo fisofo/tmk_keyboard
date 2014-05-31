@@ -129,7 +129,7 @@ void usb_remote_wakeup(void);
 #ifdef NKRO_ENABLE
 #define KBD2_INTERFACE		4
 #define KBD2_ENDPOINT		5
-#define KBD2_SIZE		16
+#define KBD2_SIZE		32
 #define KBD2_BUFFER		EP_DOUBLE_BUFFER
 #define KBD2_REPORT_KEYS	(KBD2_SIZE - 1)
 #endif

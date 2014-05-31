@@ -52,6 +52,7 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
  */
 #define DEBOUNCE        2
 #define TAPPING_TERM    180
+#define TAPPING_TOGGLE  1
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -82,6 +83,5 @@ Project located at <https://github.com/benblazak/ergodox-firmware>
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
-//#define DEBUG_MATRIX_FREQ
 
 #endif
