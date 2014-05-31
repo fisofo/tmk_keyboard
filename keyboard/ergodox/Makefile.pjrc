@@ -81,16 +81,19 @@ OPT_DEFS += -DBOOTLOADER_SIZE=512 -DFLASH_SIZE_BYTES=0x8000
 # Build Options
 #   comment out to disable the options.
 #
-#BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
+BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE = yes	# Mouse keys(+5000)
 EXTRAKEY_ENABLE = yes	# Audio control and System control(+600)
 #CONSOLE_ENABLE = yes    # Console for debug
 #COMMAND_ENABLE = yes    # Commands for debug and configuration
 SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = yes	    # USB Nkey Rollover(+500)
+NKRO_ENABLE = yes	# USB Nkey Rollover(+500)
 #PS2_MOUSE_ENABLE = yes	# PS/2 mouse(TrackPoint) support
 INVERT_NUMLOCK = yes 	# invert state of NumLock led
 
+ifdef INVERT_NUMLOCK
+	OPT_DEFS += -DINVERT_NUMLOCK
+endif
 
 # Search Path
 VPATH += $(TARGET_DIR)
@@ -108,9 +111,6 @@ colemak: all
 
 workman: OPT_DEFS += -DKEYMAP_WORKMAN
 workman: all
-
-micro: OPT_DEFS += -DKEYMAP_MICRO
-micro: all
 
 cub: OPT_DEFS += -DKEYMAP_CUB
 cub: all
